@@ -8845,7 +8845,7 @@ GroupFlashMemory,
 GroupDAC,
 };
 
-# 28 "SyntApp.h"
+# 45 "SyntApp.h"
 const uint32_t SYNTH_REGS[13] =
 {
 0x1041C,
@@ -8854,9 +8854,9 @@ const uint32_t SYNTH_REGS[13] =
 0x1110FCC9,
 0x102D0428,
 0x120000E7,
-0x35006076,
+0x35030036,
 0x800025,
-0x800BF84,
+0x30009F84,
 0x3,
 0x12,
 0xC000001,

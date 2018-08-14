@@ -114,10 +114,12 @@ namespace KUSC
             {
                 case KuscMessageParams.MESSAGE_REQUEST.SYNTH_DOWN_SET:
                     statusMsg = "System: Send syntesizer TX (Down) setting serial packet";
+                    KuscUtil.clear_cnt();
                     break;
 
                 case KuscMessageParams.MESSAGE_REQUEST.SYNTH_UP_SET:
                     statusMsg = "System: Send syntesizer RX (Up) setting serial packet";
+                    KuscUtil.clear_cnt();
                     break;
 
                 case KuscMessageParams.MESSAGE_REQUEST.SYNTH_UP_OPER:

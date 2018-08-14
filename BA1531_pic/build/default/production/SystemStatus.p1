@@ -6847,119 +6847,119 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;MessageFunctions.h: 32: GroupFlashMemory,
 [; ;MessageFunctions.h: 33: GroupDAC,
 [; ;MessageFunctions.h: 34: };
-"28 SyntApp.h
+"45 SyntApp.h
 [v _SYNTH_REGS `Cul ~T0 @X0 -> 13 `i e ]
 [i _SYNTH_REGS
 :U ..
-"30
+"47
 -> -> 66588 `l `ul
-"31
+"48
 -> -> 6369291 `l `ul
-"32
+"49
 -> -> 12589370 `l `ul
-"33
+"50
 -> -> 286325961 `l `ul
-"34
+"51
 -> -> 271385640 `l `ul
-"35
+"52
 -> -> 301990119 `l `ul
-"36
--> -> 889217142 `l `ul
-"37
+"53
+-> -> 889389110 `l `ul
+"54
 -> -> 8388645 `l `ul
-"38
--> -> 134266756 `l `ul
-"39
+"55
+-> -> 805347204 `l `ul
+"56
 -> -> -> 3 `i `l `ul
-"40
+"57
 -> -> -> 18 `i `l `ul
-"41
+"58
 -> -> 201326593 `l `ul
-"43
+"60
 -> -> 2098816 `l `ul
 ..
 ]
-[; ;SyntApp.h: 28: const uint32_t SYNTH_REGS[13] =
-[; ;SyntApp.h: 29: {
-[; ;SyntApp.h: 30: 0x1041C,
-[; ;SyntApp.h: 31: 0x61300B,
-[; ;SyntApp.h: 32: 0xC0193A,
-[; ;SyntApp.h: 33: 0x1110FCC9,
-[; ;SyntApp.h: 34: 0x102D0428,
-[; ;SyntApp.h: 35: 0x120000E7,
-[; ;SyntApp.h: 36: 0x35006076,
-[; ;SyntApp.h: 37: 0x800025,
-[; ;SyntApp.h: 38: 0x800BF84,
-[; ;SyntApp.h: 39: 0x3,
-[; ;SyntApp.h: 40: 0x12,
-[; ;SyntApp.h: 41: 0xC000001,
-[; ;SyntApp.h: 42: 0x200680
-[; ;SyntApp.h: 43: };
-"45
+[; ;SyntApp.h: 45: const uint32_t SYNTH_REGS[13] =
+[; ;SyntApp.h: 46: {
+[; ;SyntApp.h: 47: 0x1041C,
+[; ;SyntApp.h: 48: 0x61300B,
+[; ;SyntApp.h: 49: 0xC0193A,
+[; ;SyntApp.h: 50: 0x1110FCC9,
+[; ;SyntApp.h: 51: 0x102D0428,
+[; ;SyntApp.h: 52: 0x120000E7,
+[; ;SyntApp.h: 53: 0x35030036,
+[; ;SyntApp.h: 54: 0x800025,
+[; ;SyntApp.h: 55: 0x30009F84,
+[; ;SyntApp.h: 56: 0x3,
+[; ;SyntApp.h: 57: 0x12,
+[; ;SyntApp.h: 58: 0xC000001,
+[; ;SyntApp.h: 59: 0x200680
+[; ;SyntApp.h: 60: };
+"62
 [v _SYNTH_ADDRES `Cuc ~T0 @X0 -> 13 `i e ]
 [i _SYNTH_ADDRES
 :U ..
-"48
+"65
 -> -> 4 `i `uc
-"49
+"66
 -> -> 8 `i `uc
-"50
+"67
 -> -> 12 `i `uc
-"51
+"68
 -> -> 0 `i `uc
-"52
+"69
 -> -> 16 `i `uc
-"53
+"70
 -> -> 0 `i `uc
-"54
+"71
 -> -> 20 `i `uc
-"55
+"72
 -> -> 0 `i `uc
-"56
+"73
 -> -> 0 `i `uc
-"57
+"74
 -> -> 0 `i `uc
-"58
+"75
 -> -> 24 `i `uc
-"59
+"76
 -> -> 28 `i `uc
-"60
+"77
 -> -> 0 `i `uc
 ..
 ]
-[; ;SyntApp.h: 45: const uint8_t SYNTH_ADDRES[13] =
-[; ;SyntApp.h: 46: {
-[; ;SyntApp.h: 48: 0x4,
-[; ;SyntApp.h: 49: 0x8,
-[; ;SyntApp.h: 50: 0xC,
-[; ;SyntApp.h: 51: 0x00,
-[; ;SyntApp.h: 52: 0x10,
-[; ;SyntApp.h: 53: 0x00,
-[; ;SyntApp.h: 54: 0x14,
-[; ;SyntApp.h: 55: 0x00,
-[; ;SyntApp.h: 56: 0x00,
-[; ;SyntApp.h: 57: 0x00,
-[; ;SyntApp.h: 58: 0x18,
-[; ;SyntApp.h: 59: 0x1C,
-[; ;SyntApp.h: 60: 0x00,
-[; ;SyntApp.h: 61: };
-[; ;SyntApp.h: 63: typedef enum
-[; ;SyntApp.h: 64: {
-[; ;SyntApp.h: 65: UNLOCK = 0x0,
-[; ;SyntApp.h: 66: LOCK = 0x1,
-[; ;SyntApp.h: 67: } SYNTH_LD_STATE;
-"71
+[; ;SyntApp.h: 62: const uint8_t SYNTH_ADDRES[13] =
+[; ;SyntApp.h: 63: {
+[; ;SyntApp.h: 65: 0x4,
+[; ;SyntApp.h: 66: 0x8,
+[; ;SyntApp.h: 67: 0xC,
+[; ;SyntApp.h: 68: 0x00,
+[; ;SyntApp.h: 69: 0x10,
+[; ;SyntApp.h: 70: 0x00,
+[; ;SyntApp.h: 71: 0x14,
+[; ;SyntApp.h: 72: 0x00,
+[; ;SyntApp.h: 73: 0x00,
+[; ;SyntApp.h: 74: 0x00,
+[; ;SyntApp.h: 75: 0x18,
+[; ;SyntApp.h: 76: 0x1C,
+[; ;SyntApp.h: 77: 0x00,
+[; ;SyntApp.h: 78: };
+[; ;SyntApp.h: 80: typedef enum
+[; ;SyntApp.h: 81: {
+[; ;SyntApp.h: 82: UNLOCK = 0x0,
+[; ;SyntApp.h: 83: LOCK = 0x1,
+[; ;SyntApp.h: 84: } SYNTH_LD_STATE;
+"88
 [v _synthLdRxArray `Vuc ~T0 @X0 -> 12 `i e ]
-[; ;SyntApp.h: 71: volatile bool synthLdRxArray[12];
-"72
+[; ;SyntApp.h: 88: volatile bool synthLdRxArray[12];
+"89
 [v _synthLdTxArray `Vuc ~T0 @X0 -> 12 `i e ]
-[; ;SyntApp.h: 72: volatile bool synthLdTxArray[12];
-[; ;SyntApp.h: 74: void PLLInitialize(void);
-[; ;SyntApp.h: 75: void InitSynth(SPI_PERIPHERAL cType);
-[; ;SyntApp.h: 76: void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data);
-[; ;SyntApp.h: 77: void SetSynthOper(SPI_PERIPHERAL cType);
-[; ;SyntApp.h: 78: void SynthReadData(SPI_PERIPHERAL cType, char* data);
-[; ;SyntApp.h: 79: void SynthLdDetect(void);
+[; ;SyntApp.h: 89: volatile bool synthLdTxArray[12];
+[; ;SyntApp.h: 91: void PLLInitialize(void);
+[; ;SyntApp.h: 92: void InitSynth(SPI_PERIPHERAL cType);
+[; ;SyntApp.h: 93: void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data);
+[; ;SyntApp.h: 94: void SetSynthOper(SPI_PERIPHERAL cType);
+[; ;SyntApp.h: 95: void SynthReadData(SPI_PERIPHERAL cType, char* data);
+[; ;SyntApp.h: 96: void SynthLdDetect(void);
 [; ;math.h: 30: extern double fabs(double);
 [; ;math.h: 31: extern double floor(double);
 [; ;math.h: 32: extern double ceil(double);
@@ -7202,192 +7202,180 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;SystemStatus.c: 26: TxMsg[(3)] = (13);
 "26
 [e = *U + &U _TxMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> -> 13 `i `uc ]
-[; ;SystemStatus.c: 29: TxMsg[(0x4) + 0] = (( ("Jul 08 2018"[ 7] - '0') * 1000 + ("Jul 08 2018"[ 8] - '0') * 100 + ("Jul 08 2018"[ 9] - '0') * 10 + ("Jul 08 2018"[10] - '0') ) & 0xFF00) >> 8;
+[; ;SystemStatus.c: 29: TxMsg[(0x4) + 0] = (( ("Aug 14 2018"[ 7] - '0') * 1000 + ("Aug 14 2018"[ 8] - '0') * 100 + ("Aug 14 2018"[ 9] - '0') * 10 + ("Aug 14 2018"[10] - '0') ) & 0xFF00) >> 8;
 "29
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 0 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & + + + * - -> *U + :s 1C * -> -> 7 `i `x -> -> # *U :s 1C `i `x `ui -> 48 `ui -> -> 1000 `i `ui * - -> *U + :s 2C * -> -> 8 `i `x -> -> # *U :s 2C `i `x `ui -> 48 `ui -> -> 100 `i `ui * - -> *U + :s 3C * -> -> 9 `i `x -> -> # *U :s 3C `i `x `ui -> 48 `ui -> -> 10 `i `ui - -> *U + :s 4C * -> -> 10 `i `x -> -> # *U :s 4C `i `x `ui -> 48 `ui -> 65280 `ui -> 8 `i `uc ]
-[; ;SystemStatus.c: 30: TxMsg[(0x4) + 1] = ( ("Jul 08 2018"[ 7] - '0') * 1000 + ("Jul 08 2018"[ 8] - '0') * 100 + ("Jul 08 2018"[ 9] - '0') * 10 + ("Jul 08 2018"[10] - '0') ) & 0xFF;
+[; ;SystemStatus.c: 30: TxMsg[(0x4) + 1] = ( ("Aug 14 2018"[ 7] - '0') * 1000 + ("Aug 14 2018"[ 8] - '0') * 100 + ("Aug 14 2018"[ 9] - '0') * 10 + ("Aug 14 2018"[10] - '0') ) & 0xFF;
 "30
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 1 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & + + + * - -> *U + :s 5C * -> -> 7 `i `x -> -> # *U :s 5C `i `x `ui -> 48 `ui -> -> 1000 `i `ui * - -> *U + :s 6C * -> -> 8 `i `x -> -> # *U :s 6C `i `x `ui -> 48 `ui -> -> 100 `i `ui * - -> *U + :s 7C * -> -> 9 `i `x -> -> # *U :s 7C `i `x `ui -> 48 `ui -> -> 10 `i `ui - -> *U + :s 8C * -> -> 10 `i `x -> -> # *U :s 8C `i `x `ui -> 48 `ui -> -> 255 `i `ui `uc ]
-[; ;SystemStatus.c: 33: TxMsg[(0x4) + 2] = "Jul 08 2018"[0];
+[; ;SystemStatus.c: 33: TxMsg[(0x4) + 2] = "Aug 14 2018"[0];
 "33
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 2 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux *U + :s 9C * -> -> 0 `i `x -> -> # *U :s 9C `i `x ]
-[; ;SystemStatus.c: 34: TxMsg[(0x4) + 3] = "Jul 08 2018"[1];
+[; ;SystemStatus.c: 34: TxMsg[(0x4) + 3] = "Aug 14 2018"[1];
 "34
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 3 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux *U + :s 10C * -> -> 1 `i `x -> -> # *U :s 10C `i `x ]
-[; ;SystemStatus.c: 35: TxMsg[(0x4) + 4] = "Jul 08 2018"[2];
+[; ;SystemStatus.c: 35: TxMsg[(0x4) + 4] = "Aug 14 2018"[2];
 "35
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 4 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux *U + :s 11C * -> -> 2 `i `x -> -> # *U :s 11C `i `x ]
-[; ;SystemStatus.c: 38: TxMsg[(0x4) + 5] = (( (("Jul 08 2018"[4] >= '0') ? ("Jul 08 2018"[4] - '0') * 10 : 0) + ("Jul 08 2018"[5] - '0') ) & 0xFF00) >> 8;
+[; ;SystemStatus.c: 38: TxMsg[(0x4) + 5] = (( (("Aug 14 2018"[4] >= '0') ? ("Aug 14 2018"[4] - '0') * 10 : 0) + ("Aug 14 2018"[5] - '0') ) & 0xFF00) >> 8;
 "38
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 5 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & + ? >= -> *U + :s 12C * -> -> 4 `i `x -> -> # *U :s 12C `i `x `ui -> 48 `ui : * - -> *U + :s 13C * -> -> 4 `i `x -> -> # *U :s 13C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> -> 0 `i `ui - -> *U + :s 14C * -> -> 5 `i `x -> -> # *U :s 14C `i `x `ui -> 48 `ui -> 65280 `ui -> 8 `i `uc ]
-[; ;SystemStatus.c: 39: TxMsg[(0x4) + 6] = ( (("Jul 08 2018"[4] >= '0') ? ("Jul 08 2018"[4] - '0') * 10 : 0) + ("Jul 08 2018"[5] - '0') ) & 0xFF;
+[; ;SystemStatus.c: 39: TxMsg[(0x4) + 6] = ( (("Aug 14 2018"[4] >= '0') ? ("Aug 14 2018"[4] - '0') * 10 : 0) + ("Aug 14 2018"[5] - '0') ) & 0xFF;
 "39
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 6 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & + ? >= -> *U + :s 15C * -> -> 4 `i `x -> -> # *U :s 15C `i `x `ui -> 48 `ui : * - -> *U + :s 16C * -> -> 4 `i `x -> -> # *U :s 16C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> -> 0 `i `ui - -> *U + :s 17C * -> -> 5 `i `x -> -> # *U :s 17C `i `x `ui -> 48 `ui -> -> 255 `i `ui `uc ]
-[; ;SystemStatus.c: 42: TxMsg[(0x4) + 7] = ((("15:13:15"[0] - '0') * 10 + "15:13:15"[1] - '0') & 0xFF00) >> 8;
-"42
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 7 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & - + * - -> *U + :s 18C * -> -> 0 `i `x -> -> # *U :s 18C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 19C * -> -> 1 `i `x -> -> # *U :s 19C `i `x `ui -> 48 `ui -> 65280 `ui -> 8 `i `uc ]
-[; ;SystemStatus.c: 43: TxMsg[(0x4) + 8] = (("15:13:15"[0] - '0') * 10 + "15:13:15"[1] - '0') & 0xFF;
-"43
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 8 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & - + * - -> *U + :s 20C * -> -> 0 `i `x -> -> # *U :s 20C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 21C * -> -> 1 `i `x -> -> # *U :s 21C `i `x `ui -> 48 `ui -> -> 255 `i `ui `uc ]
-[; ;SystemStatus.c: 46: TxMsg[(0x4) + 9] = ((("15:13:15"[3] - '0') * 10 + "15:13:15"[4] - '0') & 0xFF00) >> 8;
-"46
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 9 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & - + * - -> *U + :s 22C * -> -> 3 `i `x -> -> # *U :s 22C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 23C * -> -> 4 `i `x -> -> # *U :s 23C `i `x `ui -> 48 `ui -> 65280 `ui -> 8 `i `uc ]
-[; ;SystemStatus.c: 47: TxMsg[(0x4) + 10] = (("15:13:15"[3] - '0') * 10 + "15:13:15"[4] - '0') & 0xFF;
-"47
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 10 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & - + * - -> *U + :s 24C * -> -> 3 `i `x -> -> # *U :s 24C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 25C * -> -> 4 `i `x -> -> # *U :s 25C `i `x `ui -> 48 `ui -> -> 255 `i `ui `uc ]
-[; ;SystemStatus.c: 49: TxMsg[(0x4) + 11] = ((("15:13:15"[6] - '0') * 10 + "15:13:15"[7] - '0') & 0xFF00) >> 8;
-"49
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 11 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & - + * - -> *U + :s 26C * -> -> 6 `i `x -> -> # *U :s 26C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 27C * -> -> 7 `i `x -> -> # *U :s 27C `i `x `ui -> 48 `ui -> 65280 `ui -> 8 `i `uc ]
-[; ;SystemStatus.c: 50: TxMsg[(0x4) + 12] = (("15:13:15"[6] - '0') * 10 + "15:13:15"[7] - '0') & 0xFF;
-"50
-[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 12 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & - + * - -> *U + :s 28C * -> -> 6 `i `x -> -> # *U :s 28C `i `x `ui -> 48 `ui -> -> 10 `i `ui -> *U + :s 29C * -> -> 7 `i `x -> -> # *U :s 29C `i `x `ui -> 48 `ui -> -> 255 `i `ui `uc ]
-[; ;SystemStatus.c: 52: TxMsg[(13) + (0x4)] = crc8(TxMsg, (13) + (0x4));
-"52
-[e = *U + &U _TxMsg * -> -> + -> 13 `i -> 4 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux ( _crc8 (2 , &U _TxMsg + -> 13 `i -> 4 `i ]
-[; ;SystemStatus.c: 54: WriteUartMessage(TxMsg, (13) + (0x4) + 1);
+[; ;SystemStatus.c: 53: TxMsg[(0x4) + 7] = (1 & 0xFF00) >> 8;
+"53
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 7 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & -> -> 1 `i `ui -> 65280 `ui -> 8 `i `uc ]
+[; ;SystemStatus.c: 54: TxMsg[(0x4) + 8] = 1 & 0xFF;
 "54
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 8 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & -> 1 `i -> 255 `i `uc ]
+[; ;SystemStatus.c: 57: TxMsg[(0x4) + 9] = (0 & 0xFF00) >> 8;
+"57
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 9 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & -> -> 0 `i `ui -> 65280 `ui -> 8 `i `uc ]
+[; ;SystemStatus.c: 58: TxMsg[(0x4) + 10] = 0 & 0xFF;
+"58
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 10 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & -> 0 `i -> 255 `i `uc ]
+[; ;SystemStatus.c: 60: TxMsg[(0x4) + 11] = (2 & 0xFF00) >> 8;
+"60
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 11 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> >> & -> -> 2 `i `ui -> 65280 `ui -> 8 `i `uc ]
+[; ;SystemStatus.c: 61: TxMsg[(0x4) + 12] = 2 & 0xFF;
+"61
+[e = *U + &U _TxMsg * -> -> + -> 4 `i -> 12 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> & -> 2 `i -> 255 `i `uc ]
+[; ;SystemStatus.c: 64: TxMsg[(13) + (0x4)] = crc8(TxMsg, (13) + (0x4));
+"64
+[e = *U + &U _TxMsg * -> -> + -> 13 `i -> 4 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux ( _crc8 (2 , &U _TxMsg + -> 13 `i -> 4 `i ]
+[; ;SystemStatus.c: 66: WriteUartMessage(TxMsg, (13) + (0x4) + 1);
+"66
 [e ( _WriteUartMessage (2 , &U _TxMsg + + -> 13 `i -> 4 `i -> 1 `i ]
-[; ;SystemStatus.c: 55: }
-"55
+[; ;SystemStatus.c: 67: }
+"67
 [e :UE 852 ]
 }
-"57
+"69
 [v _SetMcuRunTime `(v ~T0 @X0 1 ef ]
-"58
+"70
 {
-[; ;SystemStatus.c: 57: void SetMcuRunTime()
-[; ;SystemStatus.c: 58: {
+[; ;SystemStatus.c: 69: void SetMcuRunTime()
+[; ;SystemStatus.c: 70: {
 [e :U _SetMcuRunTime ]
 [f ]
-[; ;SystemStatus.c: 59: mcuRunTimeIn5SecTicks++;
-"59
+[; ;SystemStatus.c: 71: mcuRunTimeIn5SecTicks++;
+"71
 [e ++ _mcuRunTimeIn5SecTicks -> -> -> 1 `i `l `ul ]
-[; ;SystemStatus.c: 60: mcuRunTimeIn5SecTicks %= (17280);
-"60
+[; ;SystemStatus.c: 72: mcuRunTimeIn5SecTicks %= (17280);
+"72
 [e =% _mcuRunTimeIn5SecTicks -> -> 17280 `us `ul ]
-[; ;SystemStatus.c: 61: }
-"61
+[; ;SystemStatus.c: 73: }
+"73
 [e :UE 853 ]
 }
-"63
+"75
 [v _ClearMcuRunTime `(v ~T0 @X0 1 ef ]
-"64
+"76
 {
-[; ;SystemStatus.c: 63: void ClearMcuRunTime()
-[; ;SystemStatus.c: 64: {
+[; ;SystemStatus.c: 75: void ClearMcuRunTime()
+[; ;SystemStatus.c: 76: {
 [e :U _ClearMcuRunTime ]
 [f ]
-[; ;SystemStatus.c: 65: mcuRunTimeIn5SecTicks = 0;
-"65
+[; ;SystemStatus.c: 77: mcuRunTimeIn5SecTicks = 0;
+"77
 [e = _mcuRunTimeIn5SecTicks -> -> -> 0 `i `l `ul ]
-[; ;SystemStatus.c: 66: }
-"66
+[; ;SystemStatus.c: 78: }
+"78
 [e :UE 854 ]
 }
-"68
+"80
 [v _GetMcuRunTime `(v ~T0 @X0 1 ef ]
-"69
+"81
 {
-[; ;SystemStatus.c: 68: void GetMcuRunTime()
-[; ;SystemStatus.c: 69: {
+[; ;SystemStatus.c: 80: void GetMcuRunTime()
+[; ;SystemStatus.c: 81: {
 [e :U _GetMcuRunTime ]
 [f ]
-"71
+"83
 [v _TxMsg `uc ~T0 @X0 + + -> 4 `i -> 4 `i -> 1 `i a ]
-[; ;SystemStatus.c: 71: char TxMsg[(0x4) + (0x4) + 1];
-[; ;SystemStatus.c: 74: TxMsg[(0)] = (0x24);
-"74
+[; ;SystemStatus.c: 83: char TxMsg[(0x4) + (0x4) + 1];
+[; ;SystemStatus.c: 86: TxMsg[(0)] = (0x24);
+"86
 [e = *U + &U _TxMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> -> 36 `i `uc ]
-[; ;SystemStatus.c: 75: TxMsg[(1)] = MCU_STATUS_VERSION_MSG;
-"75
+[; ;SystemStatus.c: 87: TxMsg[(1)] = MCU_STATUS_VERSION_MSG;
+"87
 [e = *U + &U _TxMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> . `E7108 1 `uc ]
-[; ;SystemStatus.c: 76: TxMsg[(2)] = STATUS_MCU_RUN_TIME;
-"76
+[; ;SystemStatus.c: 88: TxMsg[(2)] = STATUS_MCU_RUN_TIME;
+"88
 [e = *U + &U _TxMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> . `E7116 6 `uc ]
-[; ;SystemStatus.c: 77: TxMsg[(3)] = (0x4);
-"77
+[; ;SystemStatus.c: 89: TxMsg[(3)] = (0x4);
+"89
 [e = *U + &U _TxMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux -> -> 4 `i `uc ]
-"79
+"91
 [v _tempRunTime `ul ~T0 @X0 1 a ]
-[; ;SystemStatus.c: 79: uint32_t tempRunTime = mcuRunTimeIn5SecTicks;
+[; ;SystemStatus.c: 91: uint32_t tempRunTime = mcuRunTimeIn5SecTicks;
 [e = _tempRunTime _mcuRunTimeIn5SecTicks ]
-[; ;SystemStatus.c: 82: for(int idx = 0; idx < (0x4); idx++)
-"82
+[; ;SystemStatus.c: 94: for(int idx = 0; idx < (0x4); idx++)
+"94
 {
 [v _idx `i ~T0 @X0 1 a ]
 [e = _idx -> 0 `i ]
 [e $ < _idx -> 4 `i 856  ]
 [e $U 857  ]
-"83
+"95
 [e :U 856 ]
-[; ;SystemStatus.c: 83: {
+[; ;SystemStatus.c: 95: {
 {
-[; ;SystemStatus.c: 84: TxMsg[(0x4) + idx] = tempRunTime % 10;
-"84
+[; ;SystemStatus.c: 96: TxMsg[(0x4) + idx] = tempRunTime % 10;
+"96
 [e = *U + &U _TxMsg * -> -> + -> 4 `i _idx `ui `ux -> -> # *U &U _TxMsg `ui `ux -> % _tempRunTime -> -> -> 10 `i `l `ul `uc ]
-[; ;SystemStatus.c: 85: tempRunTime /= 10;
-"85
+[; ;SystemStatus.c: 97: tempRunTime /= 10;
+"97
 [e =/ _tempRunTime -> -> 10 `uc `ul ]
-"86
+"98
 }
-"82
+"94
 [e ++ _idx -> 1 `i ]
 [e $ < _idx -> 4 `i 856  ]
 [e :U 857 ]
-"86
+"98
 }
-[; ;SystemStatus.c: 86: }
-[; ;SystemStatus.c: 88: TxMsg[(0x4) + (0x4)] = crc8(TxMsg, (0x4) + (0x4));
-"88
+[; ;SystemStatus.c: 98: }
+[; ;SystemStatus.c: 100: TxMsg[(0x4) + (0x4)] = crc8(TxMsg, (0x4) + (0x4));
+"100
 [e = *U + &U _TxMsg * -> -> + -> 4 `i -> 4 `i `ui `ux -> -> # *U &U _TxMsg `ui `ux ( _crc8 (2 , &U _TxMsg + -> 4 `i -> 4 `i ]
-[; ;SystemStatus.c: 90: WriteUartMessage(TxMsg, (0x4) + (0x4) + 1);
-"90
+[; ;SystemStatus.c: 102: WriteUartMessage(TxMsg, (0x4) + (0x4) + 1);
+"102
 [e ( _WriteUartMessage (2 , &U _TxMsg + + -> 4 `i -> 4 `i -> 1 `i ]
-[; ;SystemStatus.c: 91: }
-"91
+[; ;SystemStatus.c: 103: }
+"103
 [e :UE 855 ]
 }
-"93
+"105
 [v _keepAliveSignalUart `(v ~T0 @X0 1 ef ]
-"94
+"106
 {
-[; ;SystemStatus.c: 93: void keepAliveSignalUart(void)
-[; ;SystemStatus.c: 94: {
+[; ;SystemStatus.c: 105: void keepAliveSignalUart(void)
+[; ;SystemStatus.c: 106: {
 [e :U _keepAliveSignalUart ]
 [f ]
-[; ;SystemStatus.c: 95: SendAckMessage((MSG_GROUPS)CONTROL_MSG, (MSG_REQUEST)CONTROL_KEEP_ALIVE);
-"95
+[; ;SystemStatus.c: 107: SendAckMessage((MSG_GROUPS)CONTROL_MSG, (MSG_REQUEST)CONTROL_KEEP_ALIVE);
+"107
 [e ( _SendAckMessage (2 , . `E7108 0 . `E7116 5 ]
-[; ;SystemStatus.c: 96: }
-"96
+[; ;SystemStatus.c: 108: }
+"108
 [e :UE 859 ]
 }
-[a 1C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 2C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 3C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 4C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 5C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 6C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 7C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 8C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 9C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 10C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 11C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 12C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 13C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 14C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 15C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 16C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 17C 74 117 108 32 48 56 32 50 48 49 56 0 ]
-[a 18C 49 53 58 49 51 58 49 53 0 ]
-[a 19C 49 53 58 49 51 58 49 53 0 ]
-[a 20C 49 53 58 49 51 58 49 53 0 ]
-[a 21C 49 53 58 49 51 58 49 53 0 ]
-[a 22C 49 53 58 49 51 58 49 53 0 ]
-[a 23C 49 53 58 49 51 58 49 53 0 ]
-[a 24C 49 53 58 49 51 58 49 53 0 ]
-[a 25C 49 53 58 49 51 58 49 53 0 ]
-[a 26C 49 53 58 49 51 58 49 53 0 ]
-[a 27C 49 53 58 49 51 58 49 53 0 ]
-[a 28C 49 53 58 49 51 58 49 53 0 ]
-[a 29C 49 53 58 49 51 58 49 53 0 ]
+[a 1C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 2C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 3C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 4C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 5C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 6C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 7C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 8C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 9C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 10C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 11C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 12C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 13C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 14C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 15C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 16C 65 117 103 32 49 52 32 50 48 49 56 0 ]
+[a 17C 65 117 103 32 49 52 32 50 48 49 56 0 ]

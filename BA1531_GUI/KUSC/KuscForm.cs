@@ -26,7 +26,8 @@ namespace KUSC
 
         // Synthesizers:
         List<string> dataList;
-        private short _synthUpdateCnt = 0;
+        //private short _synthUpdateCnt = 0;
+        public short _synthUpdateCnt = 0;
 
         // Adc samples
         List<RichTextBox> _adcTable;
@@ -327,7 +328,8 @@ namespace KUSC
             string compileTimeSec = (chars[11] << 8 | chars[12]).ToString();
 
             tbxMcuFwVerDate.Text = string.Format("{0}/{1}/{2}", compileDateDay, compileDateMonth, compileDateYear);
-            tbxMcuFwVerTimeOfDay.Text = string.Format("{0}:{1}:{2}", compileTimeHour, compileTimeMin, compileTimeSec);
+            //tbxMcuFwVerTimeOfDay.Text = string.Format("{0}:{1}:{2}", compileTimeHour, compileTimeMin, compileTimeSec);  //yehuda change to FW
+            tbxMcuFwVerTimeOfDay.Text = string.Format("{0}.{1}{2}", compileTimeHour, compileTimeMin, compileTimeSec);
         }
 
         public void UpdateSystemRunTime(string data)
@@ -509,7 +511,11 @@ namespace KUSC
                 _synthUpdateCnt++;
             }
             _synthUpdateCnt %= KuscCommon.SYNTH_NUM_CYCLE_IN_UPDATE_REGISTERS;
+            //_synthUpdateCnt = 0;
         }
+
+        
+
 
         internal void ReadSynthUp(string data)
         {
@@ -531,7 +537,7 @@ namespace KUSC
                     tbxSynthRxReadCe.Text = KuscCommon.SYNTH_STATE_OFF;
                     btnOperSyntUp.Text = KuscCommon.SYNTH_STATE_ON;
                 }
-                tbxSynthRxReadCp.Text = cbxSynthRxSetCp.Items[_kuscSynth.GetCpIndxFromStream(data)].ToString();
+                tbxSynthRxReadCp.Text = cbxSynthRxSetCp.Items[_kuscSynth.GetRXCpIndxFromStream(data)].ToString();
 
                 // Store info at system log
                 _kuscLogs.WriteLogMsgOk("System: get Synthesizer RX [Up] data");
@@ -573,8 +579,8 @@ namespace KUSC
                     tbxSynthTxReadCe.Text = KuscCommon.SYNTH_STATE_OFF;
                     btnOperSyntDown.Text = KuscCommon.SYNTH_STATE_ON;
                 }
-                tbxSynthTxReadCp.Text = cbxSynthTxSetCp.Items[_kuscSynth.GetCpIndxFromStream(data)].ToString();
-
+                tbxSynthTxReadCp.Text = cbxSynthTxSetCp.Items[_kuscSynth.GetTXCpIndxFromStream(data)].ToString();
+                
                 // Store info at system log
                 _kuscLogs.WriteLogMsgOk("System: get Synthesizer TX [down] data");
                 _kuscLogs.WriteLogMsgOk(string.Format("Freq: {0} [MHz] \t CP: {1} [mA] \t CE STATE: {2}", tbxSynthTxReadRf.Text, tbxSynthTxReadCp.Text, tbxSynthTxReadCe.Text));
@@ -719,6 +725,7 @@ namespace KUSC
                 tbxSynthVcoOutTxPre.Text = Math.Abs(fRf - fIf).ToString();
                 tbxSynthVcoOutTxAfter.Text = (Math.Abs(fRf - fIf) / 2).ToString("F2");
                 WriteStatusOk(KuscCommon.MSG_SYNTH_OK_TX_FREQ_SENT);
+                KuscUtil.clear_cnt();    ////yehuda
                 if (fRf >= KuscCommon.SYNTH_TX_FRF_MIN_VALUE_MHZ && fRf <= KuscCommon.SYNTH_TX_FRF_MAX_VALUE_MHZ)
                 {
                     if (fIf >= KuscCommon.SYNTH_TX_FIF_MIN_VALUE_MHZ && fIf <= KuscCommon.SYNTH_TX_FIF_MAX_VALUE_MHZ)
@@ -759,6 +766,7 @@ namespace KUSC
                 tbxSynthVcoOutTRxAfter.Text = (Math.Abs(fRf - fIf) / 2).ToString("F2");
 
                 WriteStatusOk(KuscCommon.MSG_SYNTH_OK_RX_FREQ_SENT);
+                KuscUtil.clear_cnt();    ////yehuda
                 if (fRf >= KuscCommon.SYNTH_RX_FRF_MIN_VALUE_MHZ && fRf <= KuscCommon.SYNTH_RX_FRF_MAX_VALUE_MHZ)
                 {
                     if (fIf >= KuscCommon.SYNTH_RX_FIF_MIN_VALUE_MHZ && fIf <= KuscCommon.SYNTH_RX_FIF_MAX_VALUE_MHZ)
@@ -1037,5 +1045,29 @@ namespace KUSC
         }
         #endregion
 
+        private void cbxSynthTxSetCp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxSynthTxReadCp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetTXCP_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSetRXCP_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void tbxMcuFwVerTimeOfDay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -184,6 +184,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbxTechMode = new System.Windows.Forms.GroupBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.btnSetRXCP = new System.Windows.Forms.Button();
+            this.btnSetTXCP = new System.Windows.Forms.Button();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.label79 = new System.Windows.Forms.Label();
             this.cbxSynthRxSetCp = new System.Windows.Forms.ComboBox();
@@ -814,9 +816,9 @@
             this.tbxMcuFwVerTime.AutoSize = true;
             this.tbxMcuFwVerTime.Location = new System.Drawing.Point(8, 67);
             this.tbxMcuFwVerTime.Name = "tbxMcuFwVerTime";
-            this.tbxMcuFwVerTime.Size = new System.Drawing.Size(33, 13);
+            this.tbxMcuFwVerTime.Size = new System.Drawing.Size(51, 13);
             this.tbxMcuFwVerTime.TabIndex = 20;
-            this.tbxMcuFwVerTime.Text = "Time:";
+            this.tbxMcuFwVerTime.Text = "MCU FW";
             // 
             // label23
             // 
@@ -829,12 +831,13 @@
             // 
             // tbxMcuFwVerTimeOfDay
             // 
-            this.tbxMcuFwVerTimeOfDay.Location = new System.Drawing.Point(47, 63);
+            this.tbxMcuFwVerTimeOfDay.Location = new System.Drawing.Point(63, 63);
             this.tbxMcuFwVerTimeOfDay.Margin = new System.Windows.Forms.Padding(2);
             this.tbxMcuFwVerTimeOfDay.Name = "tbxMcuFwVerTimeOfDay";
             this.tbxMcuFwVerTimeOfDay.ReadOnly = true;
-            this.tbxMcuFwVerTimeOfDay.Size = new System.Drawing.Size(89, 20);
+            this.tbxMcuFwVerTimeOfDay.Size = new System.Drawing.Size(73, 20);
             this.tbxMcuFwVerTimeOfDay.TabIndex = 18;
+            this.tbxMcuFwVerTimeOfDay.TextChanged += new System.EventHandler(this.tbxMcuFwVerTimeOfDay_TextChanged);
             // 
             // btnResetMcu
             // 
@@ -1618,6 +1621,7 @@
             this.tbxSynthRxIf.Name = "tbxSynthRxIf";
             this.tbxSynthRxIf.Size = new System.Drawing.Size(77, 20);
             this.tbxSynthRxIf.TabIndex = 6;
+            this.tbxSynthRxIf.Text = "00950.00";
             // 
             // label31
             // 
@@ -1648,6 +1652,7 @@
             this.tbxSynthRxRf.Name = "tbxSynthRxRf";
             this.tbxSynthRxRf.Size = new System.Drawing.Size(77, 20);
             this.tbxSynthRxRf.TabIndex = 0;
+            this.tbxSynthRxRf.Text = "13750.00";
             // 
             // groupBox38
             // 
@@ -1772,6 +1777,7 @@
             this.tbxSynthTxReadCp.Name = "tbxSynthTxReadCp";
             this.tbxSynthTxReadCp.Size = new System.Drawing.Size(55, 20);
             this.tbxSynthTxReadCp.TabIndex = 29;
+            this.tbxSynthTxReadCp.TextChanged += new System.EventHandler(this.tbxSynthTxReadCp_TextChanged);
             // 
             // label50
             // 
@@ -1927,6 +1933,7 @@
             this.tbxSynthTxIf.Name = "tbxSynthTxIf";
             this.tbxSynthTxIf.Size = new System.Drawing.Size(77, 20);
             this.tbxSynthTxIf.TabIndex = 6;
+            this.tbxSynthTxIf.Text = "02600.00";
             // 
             // tbxSynthTxRf
             // 
@@ -1935,6 +1942,7 @@
             this.tbxSynthTxRf.Name = "tbxSynthTxRf";
             this.tbxSynthTxRf.Size = new System.Drawing.Size(77, 20);
             this.tbxSynthTxRf.TabIndex = 0;
+            this.tbxSynthTxRf.Text = "11000.00";
             // 
             // tabPage3
             // 
@@ -1977,6 +1985,8 @@
             // 
             // groupBox23
             // 
+            this.groupBox23.Controls.Add(this.btnSetRXCP);
+            this.groupBox23.Controls.Add(this.btnSetTXCP);
             this.groupBox23.Controls.Add(this.groupBox25);
             this.groupBox23.Controls.Add(this.groupBox24);
             this.groupBox23.Location = new System.Drawing.Point(492, 19);
@@ -1985,6 +1995,26 @@
             this.groupBox23.TabIndex = 22;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Synthesizers CP";
+            // 
+            // btnSetRXCP
+            // 
+            this.btnSetRXCP.Location = new System.Drawing.Point(182, 135);
+            this.btnSetRXCP.Name = "btnSetRXCP";
+            this.btnSetRXCP.Size = new System.Drawing.Size(77, 23);
+            this.btnSetRXCP.TabIndex = 25;
+            this.btnSetRXCP.Text = "Set RX CP";
+            this.btnSetRXCP.UseVisualStyleBackColor = true;
+            this.btnSetRXCP.Click += new System.EventHandler(this.btnSetSyntUp_Click);
+            // 
+            // btnSetTXCP
+            // 
+            this.btnSetTXCP.Location = new System.Drawing.Point(22, 135);
+            this.btnSetTXCP.Name = "btnSetTXCP";
+            this.btnSetTXCP.Size = new System.Drawing.Size(78, 24);
+            this.btnSetTXCP.TabIndex = 24;
+            this.btnSetTXCP.Text = "Set TX CP";
+            this.btnSetTXCP.UseVisualStyleBackColor = true;
+            this.btnSetTXCP.Click += new System.EventHandler(this.btnSetSyntDown_Click);
             // 
             // groupBox25
             // 
@@ -2086,6 +2116,7 @@
             this.cbxSynthTxSetCp.Name = "cbxSynthTxSetCp";
             this.cbxSynthTxSetCp.Size = new System.Drawing.Size(78, 21);
             this.cbxSynthTxSetCp.TabIndex = 36;
+            this.cbxSynthTxSetCp.SelectedIndexChanged += new System.EventHandler(this.cbxSynthTxSetCp_SelectedIndexChanged);
             // 
             // label51
             // 
@@ -2940,7 +2971,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 15);
             this.label14.TabIndex = 1;
-            this.label14.Text = "Version: 1.03";
+            this.label14.Text = "Version: 1.04";
             // 
             // label13
             // 
@@ -3299,6 +3330,8 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox tbxSynthRxReadIf;
         private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Button btnSetRXCP;
+        private System.Windows.Forms.Button btnSetTXCP;
     }
 }
 

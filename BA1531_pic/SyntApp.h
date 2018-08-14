@@ -13,7 +13,7 @@ Author: RoeeZ (Comm-IT).                                                    ****
 
 #define SYNTH_DELAY_BETWEEN_WORDS_MSEC      250
 #define NUM_OF_TOTAL_REGISTERS              13
-#define NUM_OF_UPDATE_CYCLES                0x7
+#define NUM_OF_UPDATE_CYCLES                0x9
 
 #define NUM_OF_UART_TX_UPDATE_REGS          5
 #define NUM_OF_BYTES_UART_TX_UPDATE_REGS    5
@@ -25,7 +25,24 @@ Author: RoeeZ (Comm-IT).                                                    ****
 #define SYNTH_LD_TRIES                      2
 #define SYNTH_LD_NUM_BITS                   12
 
-const uint32_t SYNTH_REGS[NUM_OF_TOTAL_REGISTERS] = 
+//const uint32_t SYNTH_REGS[NUM_OF_TOTAL_REGISTERS] = 
+//{
+//    0x1041C,        /* R12  */
+//    0x61300B,       /* R11  */
+//    0xC0193A,       /* R10  */
+//    0x1110FCC9,     /* R09  */
+//    0x102D0428,     /* R08  */
+//    0x120000E7,     /* R07  */
+//    0x35006076,     /* R06  */
+//    0x800025,       /* R05  */
+//    0x800BF84,      /* R04  */
+//    0x3,            /* R03  */
+//    0x12,           /* R02  */
+//    0xC000001,      /* R01  */
+//    0x200680        /* R00  */
+//};
+
+const uint32_t SYNTH_REGS[NUM_OF_TOTAL_REGISTERS] =     //update SYNTH registers
 {
     0x1041C,        /* R12  */
     0x61300B,       /* R11  */
@@ -33,9 +50,9 @@ const uint32_t SYNTH_REGS[NUM_OF_TOTAL_REGISTERS] =
     0x1110FCC9,     /* R09  */
     0x102D0428,     /* R08  */
     0x120000E7,     /* R07  */
-    0x35006076,     /* R06  */
+    0x35030036,     /* R06  */
     0x800025,       /* R05  */
-    0x800BF84,      /* R04  */
+    0x30009F84,     /* R04  */
     0x3,            /* R03  */
     0x12,           /* R02  */
     0xC000001,      /* R01  */

@@ -9097,7 +9097,7 @@ void ResetMcu(void);
 void ResetCpld(void);
 void SendSystemStartAck(void);
 
-# 28 "SyntApp.h"
+# 45 "SyntApp.h"
 const uint32_t SYNTH_REGS[13] =
 {
 0x1041C,
@@ -9106,9 +9106,9 @@ const uint32_t SYNTH_REGS[13] =
 0x1110FCC9,
 0x102D0428,
 0x120000E7,
-0x35006076,
+0x35030036,
 0x800025,
-0x800BF84,
+0x30009F84,
 0x3,
 0x12,
 0xC000001,
@@ -9233,21 +9233,32 @@ void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data)
 INT_VAL retVal;
 
 retVal = GetIntFromUartData(10, data);
-
 if(retVal.con == 0xb)
 {
-if(cType == SYNTH_TX) StoreIntInEeprom(retVal.num, (0) | SYNTH_ADDRES[retVal.con], 4);
-else if(cType == SYNTH_RX) StoreIntInEeprom(retVal.num, (0x20) | SYNTH_ADDRES[retVal.con], 4);
+if(cType == SYNTH_TX)
+{
+StoreIntInEeprom(retVal.num, (0) | SYNTH_ADDRES[retVal.con], 4);
+cntRegUpdateTx = 0;
+}
+else if(cType == SYNTH_RX)
+{
+StoreIntInEeprom(retVal.num, (0x20) | SYNTH_ADDRES[retVal.con], 4);
+cntRegUpdateRx = 0;
+}
 }
 else
 {
 if(cType == SYNTH_TX)
 {
-if(cntRegUpdateTx < 0x7)
+if(retVal.con == 0xa)
+{
+cntRegUpdateTx = 0;
+}
+if(cntRegUpdateTx < 0x9)
 {
 SWSPI_send_word(cType, retVal.num, 3);
 StoreIntInEeprom(retVal.num, (0) | SYNTH_ADDRES[retVal.con], 4);
-cntRegUpdateTx ++;
+cntRegUpdateTx++;
 SendAckMessage((MSG_GROUPS)SYNTH_MSG, (MSG_REQUEST)SYNTH_REQ_ANTHER_TX_REG);
 }
 else
@@ -9258,7 +9269,11 @@ SendAckMessage((MSG_GROUPS)SYNTH_MSG, (MSG_REQUEST)SYNTH_DOWN_SET);
 }
 else if(cType == SYNTH_RX)
 {
-if(cntRegUpdateRx < 0x7)
+if(retVal.con == 0xa)
+{
+cntRegUpdateRx = 0;
+}
+if(cntRegUpdateRx < 0x9)
 {
 SWSPI_send_word(cType, retVal.num, 3);
 StoreIntInEeprom(retVal.num, (0x20) | SYNTH_ADDRES[retVal.con], 4);
@@ -9355,7 +9370,7 @@ TxMsg[5 * 5 + 2 + 1] = crc8(TxMsg, 5 * 5 + 2 + 1);
 WriteUartMessage(TxMsg, 5 * 5 + 2 + 1 + 1);
 }
 
-# 221
+# 236
 void SynthLdDetect(void)
 {
 

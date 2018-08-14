@@ -152,6 +152,13 @@ namespace KUSC
             _KuscForm.SendSynthRegisters(KuscCommon.SYNTH_TYPE.SYNTH_TX);
         }
 
+
+        internal static void clear_cnt()
+        {
+            _KuscForm._synthUpdateCnt = 0;
+        }
+
+
         internal static void ReqAntherRxRegister()
         {
             _KuscForm.SendSynthRegisters(KuscCommon.SYNTH_TYPE.SYNTH_RX);

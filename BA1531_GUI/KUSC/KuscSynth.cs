@@ -41,13 +41,20 @@ namespace KUSC
             regList.Add(CalcReg02().ToString() + '@' + 0x2.ToString() + '#');                // R2
             regList.Add(CalcReg01().ToString() + '@' + 0x1.ToString() + '#');                // R1
             regList.Add(CalcReg00().ToString() + '@' + 0x0.ToString() + '#');                // R0
-            regList.Add(KuscCommon.SYNTH_REG04.ToString() + '@' + 0x4.ToString() + '#');     // R4
+            //regList.Add(KuscCommon.SYNTH_REG04.ToString() + '@' + 0x4.ToString() + '#');     // R4
+            if (cSynthType == KuscCommon.SYNTH_TYPE.SYNTH_TX)
+            {
+                regList.Add(synthReg04Tx.ToString() + '@' + 0x4.ToString() + '#');          // R4 - TX
+            }
+            else if (cSynthType == KuscCommon.SYNTH_TYPE.SYNTH_RX)
+            {
+                regList.Add(synthReg04Rx.ToString() + '@' + 0x4.ToString() + '#');          // R4 - RX
+            }
             regList.Add(CalcReg00().ToString() + '@' + 0x0.ToString() + '#');                // R0
 
             // Now send the F_RF frequancy to read latter time:
             Int32 fRfToSend = Convert.ToInt32(fRF * 100);
             regList.Add(fRfToSend.ToString() + '@' + 0xb.ToString() + '#');
-
             return regList;
         }
 
@@ -189,12 +196,28 @@ namespace KUSC
             return condition;
         }
 
-        internal Int32 GetCpIndxFromStream(string data)
+        internal Int32 GetTXCpIndxFromStream(string data)
         {
             var chars = data.Replace("\x2C", string.Empty).ToCharArray();
-            var returnVal = (Convert.ToInt32(chars[13]) & 0x3C) >> 2;
+            var returnVal = (Convert.ToInt32(chars[16]) & 0x3C) >> 2;         ///was 2 yehuda  
             return returnVal;
+            //var returnVal = (synthReg04Tx & 0x3C00) >> 10;
+            //return returnVal;
+
         }
+
+
+        internal Int32 GetRXCpIndxFromStream(string data)
+        {
+            //var chars = data.Replace("\x2C", string.Empty).ToCharArray();
+            //var returnVal = (Convert.ToInt32(chars[13]) & 0x3C)  >> 2;         ///was 2 yehuda  
+            //return returnVal;
+            var returnVal = (synthReg04Rx & 0x3C00) >> 10;
+            return returnVal;
+
+        }
+
+
 
         internal double calcFrfFromUartData(string data)
         {

@@ -17,3 +17,13 @@ C:\Software_projects\ABMicrowaves\Projects\PC\Project_1531_KUSC_SerialComMgr\KUS
 C:\Software_projects\ABMicrowaves\Projects\PC\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.csproj.GenerateResource.Cache
 C:\Software_projects\ABMicrowaves\Projects\PC\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.exe
 C:\Software_projects\ABMicrowaves\Projects\PC\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.pdb
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\bin\Debug\KUSC.exe.config
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\bin\Debug\KUSC.exe
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\bin\Debug\KUSC.pdb
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.csprojResolveAssemblyReference.cache
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.KuscForm.resources
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.Properties.Resources.resources
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.csproj.GenerateResource.cache
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.csproj.CoreCompileInputs.cache
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.exe
+C:\BA\Software_projects\PIC\1531\next_versions_yehuda\Project_1531_KUSC_SerialComMgr\KUSC\obj\Debug\KUSC.pdb

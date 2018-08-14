@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=BA1531_last_ROEE
+PROJECTNAME=Project_1531_next_ver
 
 # Active Configuration
 DEFAULTCONF=default

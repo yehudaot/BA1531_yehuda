@@ -89,23 +89,34 @@ void InitSynth(SPI_PERIPHERAL cType)
 void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data)
 {
     INT_VAL retVal;
-    
+        
     retVal = GetIntFromUartData(10, data);
-    
     if(retVal.con == 0xb)
     {
-        if(cType == SYNTH_TX) StoreIntInEeprom(retVal.num, EEPROM_SYNTH_TX_REGS_ADDRESS_OFSEET | SYNTH_ADDRES[retVal.con], 4);
-        else if(cType == SYNTH_RX) StoreIntInEeprom(retVal.num, EEPROM_SYNTH_RX_REGS_ADDRESS_OFSEET | SYNTH_ADDRES[retVal.con], 4);
+        if(cType == SYNTH_TX)
+        {
+            StoreIntInEeprom(retVal.num, EEPROM_SYNTH_TX_REGS_ADDRESS_OFSEET | SYNTH_ADDRES[retVal.con], 4);
+            cntRegUpdateTx = 0;
+        }
+        else if(cType == SYNTH_RX)
+        {
+            StoreIntInEeprom(retVal.num, EEPROM_SYNTH_RX_REGS_ADDRESS_OFSEET | SYNTH_ADDRES[retVal.con], 4);
+            cntRegUpdateRx = 0;
+        }
     }
     else
     {
         if(cType == SYNTH_TX)
         {
+            if(retVal.con == 0xa)
+            {
+                cntRegUpdateTx = 0;
+            }
             if(cntRegUpdateTx < NUM_OF_UPDATE_CYCLES)
-            {        
+            {      
                 SWSPI_send_word(cType, retVal.num, 3);
                 StoreIntInEeprom(retVal.num, EEPROM_SYNTH_TX_REGS_ADDRESS_OFSEET | SYNTH_ADDRES[retVal.con], 4);
-                cntRegUpdateTx ++;
+                cntRegUpdateTx++;
                 SendAckMessage((MSG_GROUPS)SYNTH_MSG, (MSG_REQUEST)SYNTH_REQ_ANTHER_TX_REG);
             }
             else
@@ -116,6 +127,10 @@ void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data)
         }
         else if(cType == SYNTH_RX)
         {
+            if(retVal.con == 0xa)
+            {
+                cntRegUpdateRx = 0;
+            }
             if(cntRegUpdateRx < NUM_OF_UPDATE_CYCLES)
             {
                 SWSPI_send_word(cType, retVal.num, 3);

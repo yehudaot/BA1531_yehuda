@@ -6868,119 +6868,119 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;MessageFunctions.h: 32: GroupFlashMemory,
 [; ;MessageFunctions.h: 33: GroupDAC,
 [; ;MessageFunctions.h: 34: };
-"28 SyntApp.h
+"45 SyntApp.h
 [v _SYNTH_REGS `Cul ~T0 @X0 -> 13 `i e ]
 [i _SYNTH_REGS
 :U ..
-"30
+"47
 -> -> 66588 `l `ul
-"31
+"48
 -> -> 6369291 `l `ul
-"32
+"49
 -> -> 12589370 `l `ul
-"33
+"50
 -> -> 286325961 `l `ul
-"34
+"51
 -> -> 271385640 `l `ul
-"35
+"52
 -> -> 301990119 `l `ul
-"36
--> -> 889217142 `l `ul
-"37
+"53
+-> -> 889389110 `l `ul
+"54
 -> -> 8388645 `l `ul
-"38
--> -> 134266756 `l `ul
-"39
+"55
+-> -> 805347204 `l `ul
+"56
 -> -> -> 3 `i `l `ul
-"40
+"57
 -> -> -> 18 `i `l `ul
-"41
+"58
 -> -> 201326593 `l `ul
-"43
+"60
 -> -> 2098816 `l `ul
 ..
 ]
-[; ;SyntApp.h: 28: const uint32_t SYNTH_REGS[13] =
-[; ;SyntApp.h: 29: {
-[; ;SyntApp.h: 30: 0x1041C,
-[; ;SyntApp.h: 31: 0x61300B,
-[; ;SyntApp.h: 32: 0xC0193A,
-[; ;SyntApp.h: 33: 0x1110FCC9,
-[; ;SyntApp.h: 34: 0x102D0428,
-[; ;SyntApp.h: 35: 0x120000E7,
-[; ;SyntApp.h: 36: 0x35006076,
-[; ;SyntApp.h: 37: 0x800025,
-[; ;SyntApp.h: 38: 0x800BF84,
-[; ;SyntApp.h: 39: 0x3,
-[; ;SyntApp.h: 40: 0x12,
-[; ;SyntApp.h: 41: 0xC000001,
-[; ;SyntApp.h: 42: 0x200680
-[; ;SyntApp.h: 43: };
-"45
+[; ;SyntApp.h: 45: const uint32_t SYNTH_REGS[13] =
+[; ;SyntApp.h: 46: {
+[; ;SyntApp.h: 47: 0x1041C,
+[; ;SyntApp.h: 48: 0x61300B,
+[; ;SyntApp.h: 49: 0xC0193A,
+[; ;SyntApp.h: 50: 0x1110FCC9,
+[; ;SyntApp.h: 51: 0x102D0428,
+[; ;SyntApp.h: 52: 0x120000E7,
+[; ;SyntApp.h: 53: 0x35030036,
+[; ;SyntApp.h: 54: 0x800025,
+[; ;SyntApp.h: 55: 0x30009F84,
+[; ;SyntApp.h: 56: 0x3,
+[; ;SyntApp.h: 57: 0x12,
+[; ;SyntApp.h: 58: 0xC000001,
+[; ;SyntApp.h: 59: 0x200680
+[; ;SyntApp.h: 60: };
+"62
 [v _SYNTH_ADDRES `Cuc ~T0 @X0 -> 13 `i e ]
 [i _SYNTH_ADDRES
 :U ..
-"48
+"65
 -> -> 4 `i `uc
-"49
+"66
 -> -> 8 `i `uc
-"50
+"67
 -> -> 12 `i `uc
-"51
+"68
 -> -> 0 `i `uc
-"52
+"69
 -> -> 16 `i `uc
-"53
+"70
 -> -> 0 `i `uc
-"54
+"71
 -> -> 20 `i `uc
-"55
+"72
 -> -> 0 `i `uc
-"56
+"73
 -> -> 0 `i `uc
-"57
+"74
 -> -> 0 `i `uc
-"58
+"75
 -> -> 24 `i `uc
-"59
+"76
 -> -> 28 `i `uc
-"60
+"77
 -> -> 0 `i `uc
 ..
 ]
-[; ;SyntApp.h: 45: const uint8_t SYNTH_ADDRES[13] =
-[; ;SyntApp.h: 46: {
-[; ;SyntApp.h: 48: 0x4,
-[; ;SyntApp.h: 49: 0x8,
-[; ;SyntApp.h: 50: 0xC,
-[; ;SyntApp.h: 51: 0x00,
-[; ;SyntApp.h: 52: 0x10,
-[; ;SyntApp.h: 53: 0x00,
-[; ;SyntApp.h: 54: 0x14,
-[; ;SyntApp.h: 55: 0x00,
-[; ;SyntApp.h: 56: 0x00,
-[; ;SyntApp.h: 57: 0x00,
-[; ;SyntApp.h: 58: 0x18,
-[; ;SyntApp.h: 59: 0x1C,
-[; ;SyntApp.h: 60: 0x00,
-[; ;SyntApp.h: 61: };
-[; ;SyntApp.h: 63: typedef enum
-[; ;SyntApp.h: 64: {
-[; ;SyntApp.h: 65: UNLOCK = 0x0,
-[; ;SyntApp.h: 66: LOCK = 0x1,
-[; ;SyntApp.h: 67: } SYNTH_LD_STATE;
-"71
+[; ;SyntApp.h: 62: const uint8_t SYNTH_ADDRES[13] =
+[; ;SyntApp.h: 63: {
+[; ;SyntApp.h: 65: 0x4,
+[; ;SyntApp.h: 66: 0x8,
+[; ;SyntApp.h: 67: 0xC,
+[; ;SyntApp.h: 68: 0x00,
+[; ;SyntApp.h: 69: 0x10,
+[; ;SyntApp.h: 70: 0x00,
+[; ;SyntApp.h: 71: 0x14,
+[; ;SyntApp.h: 72: 0x00,
+[; ;SyntApp.h: 73: 0x00,
+[; ;SyntApp.h: 74: 0x00,
+[; ;SyntApp.h: 75: 0x18,
+[; ;SyntApp.h: 76: 0x1C,
+[; ;SyntApp.h: 77: 0x00,
+[; ;SyntApp.h: 78: };
+[; ;SyntApp.h: 80: typedef enum
+[; ;SyntApp.h: 81: {
+[; ;SyntApp.h: 82: UNLOCK = 0x0,
+[; ;SyntApp.h: 83: LOCK = 0x1,
+[; ;SyntApp.h: 84: } SYNTH_LD_STATE;
+"88
 [v _synthLdRxArray `Vuc ~T0 @X0 -> 12 `i e ]
-[; ;SyntApp.h: 71: volatile bool synthLdRxArray[12];
-"72
+[; ;SyntApp.h: 88: volatile bool synthLdRxArray[12];
+"89
 [v _synthLdTxArray `Vuc ~T0 @X0 -> 12 `i e ]
-[; ;SyntApp.h: 72: volatile bool synthLdTxArray[12];
-[; ;SyntApp.h: 74: void PLLInitialize(void);
-[; ;SyntApp.h: 75: void InitSynth(SPI_PERIPHERAL cType);
-[; ;SyntApp.h: 76: void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data);
-[; ;SyntApp.h: 77: void SetSynthOper(SPI_PERIPHERAL cType);
-[; ;SyntApp.h: 78: void SynthReadData(SPI_PERIPHERAL cType, char* data);
-[; ;SyntApp.h: 79: void SynthLdDetect(void);
+[; ;SyntApp.h: 89: volatile bool synthLdTxArray[12];
+[; ;SyntApp.h: 91: void PLLInitialize(void);
+[; ;SyntApp.h: 92: void InitSynth(SPI_PERIPHERAL cType);
+[; ;SyntApp.h: 93: void UpdateSynthFreq(SPI_PERIPHERAL cType, char* data);
+[; ;SyntApp.h: 94: void SetSynthOper(SPI_PERIPHERAL cType);
+[; ;SyntApp.h: 95: void SynthReadData(SPI_PERIPHERAL cType, char* data);
+[; ;SyntApp.h: 96: void SynthLdDetect(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
 [; ;string.h: 15: extern void * memmove(void *, const void *, size_t);

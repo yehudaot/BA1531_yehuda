@@ -37,7 +37,7 @@ void GetMcuFwVersion()
     // Insert build day
     TxMsg[MSG_DATA_LOCATION + 5] = (COMPUTE_BUILD_DAY & 0xFF00) >> 8;
     TxMsg[MSG_DATA_LOCATION + 6] = COMPUTE_BUILD_DAY & 0xFF;
-    
+ /*   
     // Insert build hour
     TxMsg[MSG_DATA_LOCATION + 7] = (COMPUTE_BUILD_HOUR & 0xFF00) >> 8;
     TxMsg[MSG_DATA_LOCATION + 8] = COMPUTE_BUILD_HOUR & 0xFF;
@@ -48,6 +48,18 @@ void GetMcuFwVersion()
 
     TxMsg[MSG_DATA_LOCATION + 11] = (COMPUTE_BUILD_SEC & 0xFF00) >> 8;
     TxMsg[MSG_DATA_LOCATION + 12] = COMPUTE_BUILD_SEC & 0xFF;
+*/
+
+    TxMsg[MSG_DATA_LOCATION + 7] = (1 & 0xFF00) >> 8;
+    TxMsg[MSG_DATA_LOCATION + 8] = 1 & 0xFF;
+
+    // Insert build min
+    TxMsg[MSG_DATA_LOCATION + 9] = (0 & 0xFF00) >> 8;
+    TxMsg[MSG_DATA_LOCATION + 10] = 0 & 0xFF;
+
+    TxMsg[MSG_DATA_LOCATION + 11] = (2 & 0xFF00) >> 8;
+    TxMsg[MSG_DATA_LOCATION + 12] = 2 & 0xFF;    
+    
     
     TxMsg[STATUS_FW_PACKET_SIZE] = crc8(TxMsg, STATUS_FW_PACKET_SIZE);
     

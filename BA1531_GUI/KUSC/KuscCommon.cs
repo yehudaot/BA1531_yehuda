@@ -62,7 +62,7 @@ namespace KUSC
         public static Int16 TX_SYNTH_ID                             = 0x1;
         public static Int16 RX_SYNTH_ID                             = 0x1;
 
-        public static Int16 SYNTH_NUM_UPDATE_REGISTERS              = 0x3;
+        public static Int16 SYNTH_NUM_UPDATE_REGISTERS              = 0x3;    
         public static Int16 SYNTH_NUM_CYCLE_IN_UPDATE_REGISTERS     = 0x9;
         public static Int16 SYNTH_NUM_BYTE_UPDATE_REGISTER          = 0x5;
 
@@ -73,8 +73,12 @@ namespace KUSC
         };
 
         // Save Synth registers:
-        public static Int32 SYNTH_REG04 = 0x30008384;
-        public static Int32 SYNTH_REG06 = 0x35006076;
+        //public static Int32 SYNTH_REG04 = 0x30008384;
+        //public static Int32 SYNTH_REG06 = 0x35006076;
+        //public static Int32 SYNTH_REG10 = 0xC0193A;
+
+        public static Int32 SYNTH_REG04 = 0x30009F84;
+        public static Int32 SYNTH_REG06 = 0x35030036;
         public static Int32 SYNTH_REG10 = 0xC0193A;
 
         public static int SYNTH_F_REF_MHZ   = 40;
@@ -87,7 +91,7 @@ namespace KUSC
         public static int SNYTH_F_CHSP_KHZ  = 100;
 
         public static string SYNTH_TX_F_RF_INIT_VALUE = "11000";
-        public static string SYNTH_TX_F_IF_INIT_VALUE = "02100";
+        public static string SYNTH_TX_F_IF_INIT_VALUE = "02600";    //was 02100 yehuda
         public static string SYNTH_RX_F_RF_INIT_VALUE = "00950";
         public static string SYNTH_RX_F_IF_INIT_VALUE = "13750";
 
